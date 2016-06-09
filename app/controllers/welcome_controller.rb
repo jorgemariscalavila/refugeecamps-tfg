@@ -11,7 +11,7 @@ class WelcomeController < ApplicationController
   def detectlocation
   end
 
-  def about
+  def contact
   end
 
   def us

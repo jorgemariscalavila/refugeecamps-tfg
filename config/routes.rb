@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   get 'welcome/detectlocation'
 
-  get 'welcome/about'
+  get 'welcome/contact'
 
   get 'welcome/us'
 
