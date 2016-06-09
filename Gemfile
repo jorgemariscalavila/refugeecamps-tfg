@@ -55,5 +55,9 @@ group :development do
 gem 'foundation-rails'
 # Include 'rails_12factor' gem to enable all platform features
 gem 'rails_12factor', group: :production
+
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
 end
 
