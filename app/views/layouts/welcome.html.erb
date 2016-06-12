@@ -73,17 +73,18 @@ prueba
 <li><%= link_to 'About us', us_url%></li>
 <li><%= link_to 'Contact', contact_url%></li> 
 
-</ul>
-</div>
-
-
-
-
-
-
-
-<div id="google_translate_element"></div><script type="text/javascript">
+<li><div id="google_translate_element"></div><script type="text/javascript">
 function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'ar', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'ar', layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT, multilanguagePage: true}, 'google_translate_element');
 }
 </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</ul>
+</div>
+</li> 
+
+
+
+
+
+
+
