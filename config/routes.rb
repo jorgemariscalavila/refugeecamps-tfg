@@ -1,15 +1,15 @@
 Rails.application.routes.draw do
   get 'welcome/index'
 
-  get 'welcome/english'
+  get '/english' => 'welcome#english'
 
-  get 'welcome/arab'
+  get '/arab' => 'welcome#arab'
 
-  get 'welcome/detectlocation'
+  get '/detectlocation' => 'welcome#detectlocation'
 
-  get 'welcome/contact'
+  get '/contact' => 'welcome#contact'
 
-  get 'welcome/us'
+  get '/us' => 'welcome#aboutus'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

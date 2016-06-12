@@ -1,4 +1,7 @@
 class WelcomeController < ApplicationController
+
+  layout 'welcome'
+
   def index
   end
 
@@ -14,6 +17,6 @@ class WelcomeController < ApplicationController
   def contact
   end
 
-  def us
+  def aboutus
   end
 end

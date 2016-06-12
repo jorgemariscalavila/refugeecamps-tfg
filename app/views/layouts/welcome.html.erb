@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Refugeecamps</title>
+<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+<%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+</body>
+</html>
+
+
+
+
+
+
+<div class="top-bar">
+  <div class="top-bar-left">
+    <ul class="dropdown menu" data-dropdown-menu>
+      <li class="menu-text">Refugee camps</li>
+      
+       
+         
+     
+    </ul>
+  </div>
+  <div class="top-bar-right">
+    <ul class="dropdown menu" data-dropdown-menu>
+      
+      <li>
+        <a href="#">Language</a>
+        <ul class="menu vertical">
+          <li><%= link_to 'English', english_url%></li> 
+          <li><%= link_to 'لعربية‬', arab_url%></li>
+         
+        </ul>
+      </li>
+      <li><%= link_to 'Detect location', detectlocation_url%></li>
+      <li><%= link_to 'About us', us_url%></li>
+       <li><%= link_to 'Contact', contact_url%></li> 
+    </ul>
+  </div>
+</div>
+
+
+<%= yield %>
+
+
+
+prueba
+<img src="/assets/United-Kingdom-flag-icon.png" alt="English">
+
+prueba
+
+
+
+<div class="callout large secondary">
+<div class="row">
+<div class="large-4 columns">
+<h5> Description, copyleft...</h5>
+<p>Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit.</p>
+</h4>
+</div>
+<div class="large-3 large-offset-2 columns">
+<ul class="menu vertical">
+<li><a href="#">Contact </a></li>
+<li><a href="#">About us</a></li>
+
+</ul>
+</div>
