@@ -48,11 +48,17 @@ function init(){
 
   var layerUrl = 'https://mariscalavilajorge.cartodb.com/api/v2/viz/2b0a2fc2-3179-11e6-b994-0e31c9be1b51/viz.json';
 
+// change the query for the first layer
+  // var subLayerOptions = {
+  //   sql: "SELECT * FROM example_cartodbjs_1 where adm0_a3 = 'USA'",
+  //   cartocss: "#example_cartodbjs_1{marker-fill: #109DCD; marker-width: 5; marker-line-color: white; marker-line-width: 0;}"
+  // }
 
   cartodb.createLayer(map, layerUrl)
     .addTo(map)
     .on('done', function(layer) {
       // change query
+      // layer.getSubLayer(0).set(subLayerOptions);
     }).on('error', function() {
       //log the error
     });
