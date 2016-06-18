@@ -17,39 +17,46 @@
 //= require_tree .
 
 $(document).ready(function(){
+  console.log('Page ready!');
   $(document).foundation(); 
   $('body').on('click', '#detector', detectUserLocation);
+  notify();
 });
 
 
 function notify () {
-  alert('hola');
+  if ($('#map').length > 0) {
+    console.log('Map here, init')
+    init();
+  }else{
+    console.log('Map NOT present');
+  };
 }
 
 
-    var map;
-    function init(){
-      // initiate leaflet map
-      map = new L.Map('map', { 
-        center: [38,24],
-        zoom: 9
-      })
+var map;
+function init(){
+  // initiate leaflet map
+  map = new L.Map('map', { 
+    center: [38,24],
+    zoom: 9
+  })
 
-      L.tileLayer('https://dnv9my2eseobd.cloudfront.net/v3/cartodb.map-4xtxp73f/{z}/{x}/{y}.png', {
-        attribution: 'Mapbox <a href="http://mapbox.com/about/maps" target="_blank">Terms &amp; Feedback</a>'
-      }).addTo(map);
+  L.tileLayer('https://dnv9my2eseobd.cloudfront.net/v3/cartodb.map-4xtxp73f/{z}/{x}/{y}.png', {
+    attribution: 'Mapbox <a href="http://mapbox.com/about/maps" target="_blank">Terms &amp; Feedback</a>'
+  }).addTo(map);
 
-      var layerUrl = 'https://mariscalavilajorge.cartodb.com/api/v2/viz/2b0a2fc2-3179-11e6-b994-0e31c9be1b51/viz.json';
+  var layerUrl = 'https://mariscalavilajorge.cartodb.com/api/v2/viz/2b0a2fc2-3179-11e6-b994-0e31c9be1b51/viz.json';
 
 
-      cartodb.createLayer(map, layerUrl)
-        .addTo(map)
-        .on('done', function(layer) {
-          // change query
-        }).on('error', function() {
-          //log the error
-        });
-    }
+  cartodb.createLayer(map, layerUrl)
+    .addTo(map)
+    .on('done', function(layer) {
+      // change query
+    }).on('error', function() {
+      //log the error
+    });
+}
 
 function detectUserLocation(){
   if (navigator.geolocation) {
