@@ -77,7 +77,7 @@ function detectUserLocation(){
 function mapToPosition(position) {
   lon = position.coords.longitude;
   lat = position.coords.latitude;
-  map.setView(new L.LatLng(lat,lon), 14 );
+  map.setView(new L.LatLng(lat,lon), 4 );
   new L.CircleMarker([lat,lon],{radius: 4}).addTo(map);
 }
 
