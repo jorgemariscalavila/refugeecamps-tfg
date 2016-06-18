@@ -21,7 +21,7 @@
   <div class="top-bar-left">
     <ul class="dropdown menu" data-dropdown-menu>
     <li class="menu-text">
-      <%= link_to image_tag('LogoWebsite.png'), root_path%>
+      <%= link_to image_tag('LogoWebsite.png', alt: 'Logo'), root_path%>
       </li>
    </ul>
   </div>
@@ -54,7 +54,7 @@
 <div class="callout large secondary">
 <div class="row">
 <div class="large-4 columns">
-<h5> <img src="/assets/LogoWebsite.png" alt="Logo"></h5><br>
+<h5><%= image_tag('LogoWebsite.png', alt: 'Logo')%></h5><br>
 <p> <a href="http://www.unhcr.org/en-us/">Powered by UNHCR.</a>  <br>  <p>  Made by Jorge Mariscal Ávila. </p>
 <a href="https://creativecommons.org/licenses/by-sa/3.0/">Text is available under the Creative Commons Attribution-ShareAlike License. </a></p>
 </h4>
